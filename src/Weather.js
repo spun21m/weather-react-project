@@ -99,7 +99,16 @@ export default function Weather() {
           </div>
         </div>
         <br />
-        <small class="github-link">Open-source code by Sital Pun</small>
+        <small class="github-link">
+          <a
+            href="https://github.com/spun21m/weather-react-project"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Open-source code
+          </a>{" "}
+          by Sital Pun
+        </small>
       </div>
     </div>
   );
