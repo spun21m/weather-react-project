@@ -33,8 +33,14 @@ export default function Weather() {
 
           <div class="row" id="current-weather-info">
             <div class="col">
-              <h1 id="input-city">New Yor</h1>
-              <i class="fa-solid fa-cloud-sun"></i>
+              <ul>
+                <li>New York</li>
+                <li>
+                  <i class="fa-solid fa-cloud-sun"></i>
+                </li>
+              </ul>
+              {/* <h1 id="input-city">New York</h1>
+              <i class="fa-solid fa-cloud-sun"></i> */}
               <p>
                 <span id="degreeTemperature"> 66</span>
                 <span class="degree-in-fahrenheit dark"> °F </span>|
