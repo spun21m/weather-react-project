@@ -10,9 +10,18 @@ body {
   background-attachment: fixed;
 }
 
-h1 {
+/* h1 {
   font-size: 16px;
   text-transform: capitalize;
+} */
+
+.weather-detail ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
 }
 
 .app-container-wrapper {
@@ -89,7 +98,7 @@ h1 {
   text-decoration: underline;
 }
 
-#future-weather-info {
+/* #future-weather-info {
   font-weight: 100;
 }
 
@@ -122,7 +131,7 @@ h1 {
 #current-weather-info #current-day-precipitation {
   position: relative;
   left: 244px;
-}
+} */
 
 #top-row {
   padding-bottom: 20px;

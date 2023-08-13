@@ -6,13 +6,13 @@ export default function Weather() {
     <div className="container">
       <div className="app-container-wrapper">
         <div className="app-container">
-          <div class="row" id="top-row">
-            <div class="col-2 cities">Lisbon</div>
-            <div class="col-2 cities">Sydney</div>
-            <div class="col-2 cities">Tokyo</div>
-            <div class="col-2 cities">Toronto</div>
-            <div class="col-2 current-location">Current</div>
-          </div>
+          {/* <div className="row" id="top-row">
+            <div className="col-2 cities">Lisbon</div>
+            <div className="col-2 cities">Sydney</div>
+            <div className="col-2 cities">Tokyo</div>
+            <div className="col-2 cities">Toronto</div>
+            <div className="col-2 current-location">Current</div>
+          </div> */}
 
           <form id="search-form" className="mb-3">
             <div className="row">
@@ -30,82 +30,87 @@ export default function Weather() {
               </div>
             </div>
           </form>
-
-          <div class="row" id="current-weather-info">
-            <div class="col">
-              <ul>
-                <li>New York</li>
-                <li>
-                  <i class="fa-solid fa-cloud-sun"></i>
-                </li>
-              </ul>
-              {/* <h1 id="input-city">New York</h1>
-              <i class="fa-solid fa-cloud-sun"></i> */}
-              <p>
-                <span id="degreeTemperature"> 66</span>
-                <span class="degree-in-fahrenheit dark"> °F </span>|
-                <span class="degree-in-celcius">℃</span>
-              </p>
-            </div>
-            <div class="col" id="current-day-precipitation">
-              <h1 class="day" id="current-day">
-                Monday 20:52
-              </h1>
-              <p>
-                {/* <span> Precipitation: 9% </span><br /> */}
-                <span id="humidity-percentage">Humidity: 66% </span>
-                <br />
-                <span id="wind-speed">Wind: 6 mph </span>
-              </p>
+          <div className="row">
+            <div className="col-6">
+              <div className="weather-overview">
+                <h1 id="city">New York</h1>
+                <p>
+                  <span id="date">Monday 20:52,</span>
+                  <span id="weather-description"> Clear sky</span>
+                </p>
+              </div>
             </div>
           </div>
-          <div class="row" id="future-weather-info">
-            <div class="col" id="today">
-              <span class="day">Mon</span>
+
+          <div className="row">
+            <div className="col-6 weather-temperature">
+              <img
+                src="https://openweathermap.org/img/wn/10d@2x.png"
+                alt=""
+                id="icon"
+              />
+
+              <p>
+                <span id="temperature"> 66</span>
+                <span className="degree-in-fahrenheit dark"> °F </span>|
+                <span className="degree-in-celcius">℃</span>
+              </p>
+            </div>
+            <div className="col-6 weather-detail">
+              <ul>
+                <li>Humidity: 66%</li>
+                <li>Wind: 6 mph</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        {/* <div className="row" id="future-weather-info">
+            <div className="col" id="today">
+              <span className="day">Mon</span>
               <br />
-              <i class="fa-solid fa-cloud-sun"></i>
+              <i className="fa-solid fa-cloud-sun"></i>
               <br />
               <strong>54 ℉</strong> 39 ℉
             </div>
-            <div class="col">
-              <span class="day">Tue</span>
+            <div className="col">
+              <span className="day">Tue</span>
               <br />
-              <i class="fa-solid fa-cloud"></i>
+              <i className="fa-solid fa-cloud"></i>
               <br />
               <strong>42 ℉</strong> 28 ℉
             </div>
-            <div class="col">
-              <span class="day">Wed</span>
+            <div className="col">
+              <span className="day">Wed</span>
               <br />
-              <i class="fa-solid fa-cloud-sun"></i>
+              <i className="fa-solid fa-cloud-sun"></i>
               <br />
               <strong>40 ℉</strong> 28 ℉
             </div>
-            <div class="col">
-              <span class="day">Thu</span>
+            <div className="col">
+              <span className="day">Thu</span>
               <br />
-              <i class="fa-solid fa-cloud-sun-rain"></i>
+              <i className="fa-solid fa-cloud-sun-rain"></i>
               <br />
               <strong>45 ℉</strong> 31 ℉
             </div>
-            <div class="col">
-              <span class="day">Fri</span>
+            <div className="col">
+              <span className="day">Fri</span>
               <br />
-              <i class="fa-solid fa-cloud-sun"></i>
+              <i className="fa-solid fa-cloud-sun"></i>
               <br />
               <strong>34 ℉</strong> 8 ℉
             </div>
-            <div class="col">
-              <span class="day">Sat</span>
+            <div className="col">
+              <span className="day">Sat</span>
               <br />
-              <i class="fa-solid fa-cloud-rain"></i>
+              <i className="fa-solid fa-cloud-rain"></i>
               <br />
               <strong>26 ℉</strong> 24 ℉
             </div>
           </div>
         </div>
-        <br />
-        <small class="github-link">
+        <br /> */}
+        <small className="github-link">
           <a
             href="https://github.com/spun21m/weather-react-project"
             target="_blank"
