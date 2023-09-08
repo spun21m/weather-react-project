@@ -6,12 +6,19 @@ export default function Weather() {
     // <div className="container">
     //   <div className="app-container-wrapper">
     <div className="Weather">
-      <div className="row" id="top-row">
-        <div className="col-2 cities">Lisbon</div>
-        <div className="col-2 cities">Sydney</div>
-        <div className="col-2 cities">Tokyo</div>
-        <div className="col-2 cities">Toronto</div>
-        <div className="col-2 current-location">Current</div>
+      <div className="header-cities">
+        <ul>
+          <li>Lisbon</li>
+          <li>Sydney</li>
+          <li>Tokyo</li>
+          <li>Toronto</li>
+        </ul>
+
+        {/* <div className="col-2 ">Lisbon</div>
+        <div className="col-2 ">Sydney</div>
+        <div className="col-2 ">Tokyo</div>
+        <div className="col-2 ">Toronto</div>
+        <div className="col-2 current-location">Current</div> */}
       </div>
 
       <form id="search-form" className="mb-3">
