@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <div className="container">
         <div className="app-container-wrapper">
-          <Weather />
+          <Weather defaultCity="New York" />
           <small className="github-link">
             <a
               href="https://github.com/spun21m/weather-react-project"
