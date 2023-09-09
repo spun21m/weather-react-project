@@ -59,6 +59,10 @@ body {
   margin-bottom: 15px;
 }
 
+.WeatherInfo .weather-temperature-container {
+  align-items: center;
+}
+
 /* .Weather .weather-temperature {
   line-height: 20px;
 } */
