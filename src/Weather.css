@@ -10,11 +10,6 @@ body {
   background-attachment: fixed;
 }
 
-/* h1 {
-  font-size: 16px;
-  text-transform: capitalize;
-} */
-
 .app-container-wrapper {
   max-width: 800px;
   font-family: "Roboto", sans-serif;
@@ -33,17 +28,22 @@ body {
   box-shadow: 5px 5px 8px rgba(89, 89, 99, 0.2);
 }
 
-.Weather .search-box {
+/* .Weather .search-box {
   border: none;
   color: rgba(138, 133, 135, 0.8);
   padding: 10px 20px;
-}
+} */
 
 .Weather .btn {
   background: #335360;
   border: none;
   font-weight: 600;
-  padding: 10px 0;
+  padding: 10px;
+}
+
+.Weather .search-input {
+  background: #d9dfe9;
+  border: none;
 }
 
 .Weather ul {
@@ -62,11 +62,6 @@ body {
 /* .Weather .weather-temperature {
   line-height: 20px;
 } */
-
-.current-location {
-  background: rgb(221, 221, 221);
-  color: black;
-}
 
 .dark {
   font-weight: bold;
