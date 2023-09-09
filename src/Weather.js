@@ -16,7 +16,7 @@ export default function Weather(props) {
       wind: response.data.wind.speed,
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
-      iconUrl: "https://openweathermap.org/img/wn/10d@2x.png",
+      iconUrl: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     });
   }
 
@@ -48,12 +48,6 @@ export default function Weather(props) {
             <li>Tokyo</li>
             <li>Toronto</li>
           </ul>
-
-          {/* <div className="col-2 ">Lisbon</div>
-        <div className="col-2 ">Sydney</div>
-        <div className="col-2 ">Tokyo</div>
-        <div className="col-2 ">Toronto</div>
-        <div className="col-2 current-location">Current</div> */}
         </div>
 
         <form className="mb-3" onSubmit={handleSubmit}>
