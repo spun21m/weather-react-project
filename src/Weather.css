@@ -28,11 +28,9 @@ body {
   box-shadow: 5px 5px 8px rgba(89, 89, 99, 0.2);
 }
 
-/* .Weather .search-box {
-  border: none;
-  color: rgba(138, 133, 135, 0.8);
-  padding: 10px 20px;
-} */
+.Weather h1 {
+  margin: 0;
+}
 
 .Weather .btn {
   background: #335360;
@@ -41,9 +39,10 @@ body {
   padding: 10px;
 }
 
-.Weather .search-input {
-  background: #d9dfe9;
+.Weather input.search-input {
+  background: #e7eaef;
   border: none;
+  color: rgba(39, 33, 66, 0.4);
 }
 
 .Weather ul {
@@ -55,40 +54,33 @@ body {
   list-style: none;
 }
 
-.Weather .weather-overview {
-  margin-bottom: 15px;
-}
-
 .WeatherInfo .weather-temperature-container {
   align-items: center;
 }
 
-/* .Weather .weather-temperature {
-  line-height: 20px;
-} */
-
-.dark {
-  font-weight: bold;
+.WeatherInfo li {
+  font-size: 18px;
+  color: #455f69;
 }
 
-.degree-in-fahrenheit {
-  transition: all 200ms ease-in-out;
+.WeatherTemperature .temperature {
+  color: #212121;
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 1;
 }
 
-.degree-in-fahrenheit:hover {
-  cursor: pointer;
+.WeatherTemperature .unit {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1;
+  position: relative;
+  top: -34px;
 }
 
-.degree-in-celcius {
-  transition: all 200ms ease-in-out;
-}
-
-.degree-in-celcius:hover {
-  cursor: pointer;
-}
-
-.day {
-  font-weight: 500;
+.WeatherTemperature .unit a {
+  text-decoration: none;
+  color: rgba(3, 8, 8, 0.4);
 }
 
 .github-link {

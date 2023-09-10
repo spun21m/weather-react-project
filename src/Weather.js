@@ -27,6 +27,13 @@ export default function Weather(props) {
     axios.get(apiUrl).then(handleResponse);
   }
 
+  function searchTopDisplayCities(topCity) {
+    const apiKey = "b0ab2a5a92585c3b0f486dbd9d819d01";
+    let unit = "metric";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${topCity}&appid=${apiKey}&units=${unit}`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+
   function handleSubmit(event) {
     event.preventDefault();
     search();
@@ -36,17 +43,22 @@ export default function Weather(props) {
     setCity(event.target.value);
   }
 
+  function displayWeather(event) {
+    event.preventDefault();
+
+    const topDisplayCity = event.target.innerHTML;
+    searchTopDisplayCities(topDisplayCity);
+  }
+
   if (weatherData.ready) {
     return (
-      // <div className="container">
-      //   <div className="app-container-wrapper">
       <div className="Weather">
         <div className="header-cities">
           <ul>
-            <li>Lisbon</li>
-            <li>Sydney</li>
-            <li>Tokyo</li>
-            <li>Toronto</li>
+            <li onClick={displayWeather}>Lisbon</li>
+            <li onClick={displayWeather}>Sydney</li>
+            <li onClick={displayWeather}>Tokyo</li>
+            <li onClick={displayWeather}>Toronto</li>
           </ul>
         </div>
 
@@ -72,65 +84,6 @@ export default function Weather(props) {
         </form>
         <WeatherInfo weatherData={weatherData} />
       </div>
-
-      //     {/* <div className="row" id="future-weather-info">
-      //         <div className="col" id="today">
-      //           <span className="day">Mon</span>
-      //           <br />
-      //           <i className="fa-solid fa-cloud-sun"></i>
-      //           <br />
-      //           <strong>54 ℉</strong> 39 ℉
-      //         </div>
-      //         <div className="col">
-      //           <span className="day">Tue</span>
-      //           <br />
-      //           <i className="fa-solid fa-cloud"></i>
-      //           <br />
-      //           <strong>42 ℉</strong> 28 ℉
-      //         </div>
-      //         <div className="col">
-      //           <span className="day">Wed</span>
-      //           <br />
-      //           <i className="fa-solid fa-cloud-sun"></i>
-      //           <br />
-      //           <strong>40 ℉</strong> 28 ℉
-      //         </div>
-      //         <div className="col">
-      //           <span className="day">Thu</span>
-      //           <br />
-      //           <i className="fa-solid fa-cloud-sun-rain"></i>
-      //           <br />
-      //           <strong>45 ℉</strong> 31 ℉
-      //         </div>
-      //         <div className="col">
-      //           <span className="day">Fri</span>
-      //           <br />
-      //           <i className="fa-solid fa-cloud-sun"></i>
-      //           <br />
-      //           <strong>34 ℉</strong> 8 ℉
-      //         </div>
-      //         <div className="col">
-      //           <span className="day">Sat</span>
-      //           <br />
-      //           <i className="fa-solid fa-cloud-rain"></i>
-      //           <br />
-      //           <strong>26 ℉</strong> 24 ℉
-      //         </div>
-      //       </div>
-      //     </div>
-      //     <br /> */}
-      //     <small className="github-link">
-      //       <a
-      //         href="https://github.com/spun21m/weather-react-project"
-      //         target="_blank"
-      //         rel="noreferrer"
-      //       >
-      //         Open-source code
-      //       </a>{" "}
-      //       by Sital Pun
-      //     </small>
-      //   </div>
-      // </div>
     );
   } else {
     search();
