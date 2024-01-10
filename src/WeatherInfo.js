@@ -22,7 +22,7 @@ export default function WeatherInfo(props) {
           <div className="weather-temperature-container d-flex justify-content-start">
             <WeatherIcon code={props.weatherData.icon} size={52} />
             <WeatherTemperature
-              celsius={Math.round(props.weatherData.temperature)}
+              fahrenheit={Math.round(props.weatherData.temperature)}
             />
           </div>
         </div>

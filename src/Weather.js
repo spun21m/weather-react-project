@@ -24,14 +24,14 @@ export default function Weather(props) {
 
   function search() {
     const apiKey = "b0ab2a5a92585c3b0f486dbd9d819d01";
-    let unit = "metric";
+    let unit = "imperial";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
     axios.get(apiUrl).then(handleResponse);
   }
 
   function searchTopDisplayCities(topCity) {
     const apiKey = "b0ab2a5a92585c3b0f486dbd9d819d01";
-    let unit = "metric";
+    let unit = "imperial";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${topCity}&appid=${apiKey}&units=${unit}`;
     axios.get(apiUrl).then(handleResponse);
   }
